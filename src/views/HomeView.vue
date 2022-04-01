@@ -1,25 +1,17 @@
 <template>
-  <div>
-     <HeaderMain />
-    <HomeContent />
-    <FooterMain />
+  <div class="home">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HeaderMain from "../components/Header.vue";
-import FooterMain from  "../components/Footer.vue"
-import HomeContent from "../components/HomeContent.vue"
-export default {
-  name: "HomeView",
-  components: {
-    HeaderMain,
-    FooterMain,
-    HomeContent
-  },
-};
-</script>
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+export default {
+  name: 'HomeView',
+  components: {
+    HelloWorld
+  }
+}
+</script>

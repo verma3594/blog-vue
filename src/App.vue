@@ -1,36 +1,33 @@
 <template>
-<div>
-<HomeViewVue />
-</div>
+  <div id="app">
+    <div>
+      <b-navbar toggleable="lg" type="light" variant="light">
+        <b-container>
+          <b-navbar-brand>NavBar</b-navbar-brand>
+
+          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        <div>
+          <router-link to="/">Home</router-link>
+          <router-link to="/about">About</router-link>
+          </div>
+        </b-container>
+      </b-navbar>
+      <router-view />
+    </div>
+  </div>
 </template>
-<script>
-import HomeViewVue from "./views/HomeView.vue";
-export default {
-  name: "App",
-  components: {
-    HomeViewVue,
-  },
-};
-</script>
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
+<style scoped>
+.navbar{
+  background-color: #563d7c  !important; 
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.navbar-light .navbar-brand{
+  color: #fff;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.navbar a{
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
 }
 </style>
+
