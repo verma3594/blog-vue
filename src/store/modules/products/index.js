@@ -11,10 +11,15 @@ const actions = {
     const response = await axios.get("http://localhost:3000/products");
     commit("setProducts", response.data);
   },
+  async addProducts({commit}, product){
+    const response = await axios.post("http://localhost:3000/products", product);
+    commit("newProduct", response.data)
+  }
 };
 
 const mutations = {
   setProducts: (state, products) => (state.products = products),
+  newProduct: (state,  product) => (state.products.unshift(product)),
 };
 
 export default {
