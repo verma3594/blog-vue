@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "abv",
+      "price": 300
+    },
+    {
+      "id": 2,
+      "title": "abvf",
+      "price": 3002
+    }
+  ]
+}
