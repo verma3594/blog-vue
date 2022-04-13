@@ -181,7 +181,7 @@
       "content": "ROMA. Sono oltre 20 mila, nel nostro Paese, i bambini che soffrono di un disturbo del comportamento di tipo autistico. È quanto emerge dall'elaborazione dell'Unione europea delle cooperative (Uecoop)… [+3423 chars]"
     },
     {
-      "id": 18,
+      "id": 19,
       "author": "HDblog.it",
       "title": "Apple e Google tra le aziende più influenti al mondo: ecco la classifica (con sorprese)",
       "description": "Una classifica non esaustiva con alcune defezioni.",
@@ -191,7 +191,7 @@
       "content": "Quella delle aziende più influenti al mondo è una classifica che più di altre fa capire il peso di un brand non solo sul mercato in quanto tale, ma anche nella vita quotidiana di tutti noi consumator… [+4131 chars]"
     },
     {
-      "id": 19,
+      "id": 20,
       "author": "Cecilia Mussi",
       "title": "Gli scherzi per il pesce d’aprile, i migliori del 2022: Elon Musk apre una discoteca nello spazio?",
       "description": "Finte notizie, proclami che poi non vengono rispettati, prodotti che non esistono. Per il 1 di aprile vale tutto, sopratutto se poi viene condiviso",
@@ -199,6 +199,36 @@
       "urlToImage": "https://images2.corriereobjects.it/methode_image/socialshare/2022/03/31/768c626c-b18e-11ec-bf42-d3b8a3bcc2c5.jpg",
       "publishedAt": "2022-04-01T07:41:23Z",
       "content": "Finte notizie, proclami che poi non vengono rispettati, prodotti che non esistono. Per il 1 di aprile vale tutto, sopratutto se poi viene condiviso sui social e diventa virale. Tra i protagonisti, ov… [+665 chars]"
+    },
+    {
+      "author": "vishal verma",
+      "title": "mhy blog ",
+      "description": "kjsbd\nsnbvjkhsjlmd\nsbkflsnfm\nsfnbvjskl;lkds,",
+      "path": "",
+      "id": 21
+    }
+  ],
+  "users": [
+    {
+      "FullName": "",
+      "Email": "",
+      "Password": " ",
+      "RePassword": "",
+      "id": 1
+    },
+    {
+      "FullName": "Vishal Verma",
+      "Email": "vishal@gmail.com",
+      "Password": "12345",
+      "RePassword": "12345",
+      "id": 2
+    },
+    {
+      "FullName": "vishal ac ",
+      "Email": "xyz@gmail.com",
+      "Password": "1234",
+      "RePassword": "12345",
+      "id": 3
     }
   ]
 }
