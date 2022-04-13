@@ -1,24 +1,34 @@
 <template>
   <b-container>
-    <h3 class="mt-4 mb-3">Recent Posts</h3>
     <b-row class="custom-card">
       <b-col lg="4" v-for="product in allProducts" :key="product.id">
         <div>
           <b-card
-            :img-src="product.urlToImage"
+            :img-src="
+              product.urlToImage
+                ? product.urlToImage
+                : 'https://www.messagetech.com/wp-content/themes/ml_mti/images/no-image.jpg'
+            "
             img-alt="Image"
             img-top
             tag="article"
             class="mb-4"
           >
-            <h4>{{ product.title }}</h4>
-            <b-card-text>
-              {{ product.description }}
-            </b-card-text>
+            <p class="author">{{ product.author }}</p>
 
+            <h4>{{ product.title }}</h4>
+            <b-card-text v-html="product.description"> </b-card-text>
+            <!-- <router-link to="/blogdetail">  <b-button  variant="primary"
+              >Read More</b-button>
+              </router-link
+            > -->
+
+            <!-- <router-link
+              :to="{ name: 'blogdetail', params: { username: 'abc' } }"
+              ><b-button variant="primary">Read More</b-button></router-link
+            > -->
             <b-button :href="product.url" target="blank" variant="primary"
-              >Read More</b-button
-            >
+              >Read More</b-button>
           </b-card>
         </div>
       </b-col>
@@ -32,10 +42,15 @@ export default {
   name: "HomeContent",
   methods: {
     ...mapActions(["getProducts"]),
+
   },
   computed: mapGetters(["allProducts"]),
   created() {
     this.getProducts();
+  },
+    mounted() {
+    let user = localStorage.getItem("user-info");
+  
   },
 };
 </script>
@@ -51,5 +66,10 @@ export default {
 }
 .custom-card .card-text {
   font-size: 14px;
+}
+.author {
+  color: #777474;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 </style>
