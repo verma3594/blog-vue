@@ -6,7 +6,7 @@
           Hello <b>{{ name }} </b>, Welcome to MY BLOG
         </h4>
         <div>
-          <a class="logout-btn" @click="addBlog">Add New Blog</a> 
+          <a class="logout-btn" @click="addBlog">Add New Blog</a>
           <a href=" " class="logout-btn" @click="logout">Logout</a>
         </div>
       </div>
@@ -49,32 +49,7 @@
               ></textarea>
             </div>
           </b-col>
-          <b-col cols="6">
-            <!-- <div class="form-group">
-              <label>Enter URL</label>
-              <input
-                type="text"
-                v-model="path"
-                class="form-control"
-                placeholder="Enter URL"
-              />
-            </div> -->
-            <div class="form-group">
-              <label for="exampleFormControlFile1">Upload Image</label><br />
-              <input
-                type="file"
-                class="form-control-file"
-                id="exampleFormControlFile1"
-                required
-              />
-            </div>
-          </b-col>
-          <!-- <b-col cols="6">
-          
-  <h2>File Upload</h2>
-    <input type="file" @change="uploadFile" ref="file">
-    <button @click="submitFile">Upload!</button>
-          </b-col> -->
+       
         </b-row>
 
         <button type="submit" class="btn btn-primary">Post Blog</button>
@@ -100,7 +75,7 @@ export default {
       form: false,
     };
   },
-    components: {
+  components: {
     HomeContent,
   },
   methods: {
@@ -120,27 +95,6 @@ export default {
     },
     addBlog() {
       this.form = true;
-      console.log("first");
-    },
-
-    uploadFile() {
-      console.log("uploadFile called");
-      console.log(this.$refs.file);
-      console.log(this.$refs.file.files[0]);
-      this.Images = this.$refs.file.files[0];
-    },
-    submitFile() {
-      const formData = new FormData();
-      formData.append("file", this.Images);
-      const urlToImage = { "Content-Type": "multipart/form-data" };
-      axios
-        .post("http://localhost:3000/products", formData, { urlToImage })
-        .then((res) => {
-          console.log(res);
-          console.log(res.data.files);
-          res.data.files; // binary representation of the file
-          res.status; // HTTP status
-        });
     },
   },
 

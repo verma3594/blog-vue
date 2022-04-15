@@ -18,17 +18,10 @@
 
             <h4>{{ product.title }}</h4>
             <b-card-text v-html="product.description"> </b-card-text>
-            <!-- <router-link to="/blogdetail">  <b-button  variant="primary"
-              >Read More</b-button>
-              </router-link
-            > -->
 
-            <!-- <router-link
-              :to="{ name: 'blogdetail', params: { username: 'abc' } }"
-              ><b-button variant="primary">Read More</b-button></router-link
-            > -->
             <b-button :href="product.url" target="blank" variant="primary"
-              >Read More</b-button>
+              >Read More</b-button
+            >
           </b-card>
         </div>
       </b-col>
@@ -42,15 +35,13 @@ export default {
   name: "HomeContent",
   methods: {
     ...mapActions(["getProducts"]),
-
   },
   computed: mapGetters(["allProducts"]),
   created() {
     this.getProducts();
   },
-    mounted() {
+  mounted() {
     let user = localStorage.getItem("user-info");
-  
   },
 };
 </script>
