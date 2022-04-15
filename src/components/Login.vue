@@ -27,7 +27,7 @@
           />
         </div>
 
-        <button type="submit" class="btn btn-primary">Signup</button>
+        <button type="submit" class="btn btn-primary">Login</button>
         <p>
           Don't have an Account? <router-link to="/signup">Signup</router-link>
         </p>
